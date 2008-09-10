@@ -21,10 +21,4 @@ class git::base {
     package{'git':
         ensure => present,
     }
-    service{git:
-        ensure => running,
-        enable => true,
-        hasstatus => true,
-        require => Package[git],
-    }
 }
