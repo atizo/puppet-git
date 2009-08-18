@@ -21,8 +21,8 @@ $projectroot = "<%= projectroot %>";
 # can't have repositories hidden but browsable if you know the name.
 # And note gitweb already allows downloading the full repository,
 # so you might as well serve git-daemon too.
-# $export_ok = "";
-# $strict_export = "true";
+ $export_ok = "";
+ $strict_export = "true";
 
 # A list of base urls where all the repositories can be cloned from.
 # Easier than having per-repository cloneurl files.
