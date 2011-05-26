@@ -41,9 +41,10 @@ define git::web::repo(
         http => {
           'ServerName' => $name,
           'DocumentRoot' => '/var/www/git',
+          'ScriptAlias /gitweb.cgi /var/www/git/gitweb.cgi',
           'SetEnv' => "GITWEB_CONFIG $gitweb_config",
           'DirectoryIndex' => 'gitweb.cgi',
-          'Directory "/var/www/git"' => {
+          'Directory "/var/www/git/public"' => {
             'Options' => 'ExecCGI',
             'AddHandler' => 'cgi-script .cgi',
             'Files gitweb.cgi' => {
