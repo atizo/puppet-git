@@ -40,7 +40,7 @@ define git::web::repo(
         ensure => $ensure,
         http => {
           'ServerName' => $name,
-          'DocumentRoot' => '/var/www/git',
+          'DocumentRoot' => '/var/www/git/public',
           'ScriptAlias' => '/gitweb.cgi /var/www/git/gitweb.cgi',
           'SetEnv' => "GITWEB_CONFIG $gitweb_config",
           'DirectoryIndex' => 'gitweb.cgi',
